@@ -6,9 +6,8 @@ gradle-wrapper.jar
 /local.properties
 GeneratedPluginRegistrant.java
 
-example/android/.classpath
-example/android/.project
-example/android/.settings/org.eclipse.buildship.core.prefs
+**/android/.classpath
+**/android/.settings/org.eclipse.buildship.core.prefs
 
 # Remember to never publicly share your keystore.
 # See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
