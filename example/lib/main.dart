@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_common/flutter_common.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +26,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await FlutterCommon.platformVersion;
+      //platformVersion = await FlutterCommon.platformVersion;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
