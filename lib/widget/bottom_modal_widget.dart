@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_common/locale/common_localizations.dart';
 
 void showBottomModal(
   BuildContext context, {
@@ -8,13 +9,14 @@ void showBottomModal(
   double height,
   String path,
   bool showCancel,
-  bool isDismissible,
+  bool isDismissible = true,
+  @required Locale locale,
   @required VoidCallback confirmClick,
-  @required VoidCallback cancelClick,
+  VoidCallback cancelClick,
 }) {
   showModalBottomSheet(
       context: context,
-      isDismissible: isDismissible ?? true,
+      isDismissible: isDismissible,
       builder: (context) {
         return Container(
           color: Color(0xff737373),
@@ -48,7 +50,7 @@ void showBottomModal(
                     color: Theme.of(context).primaryColor,
                     onPressed: confirmClick,
                     child: Text(
-                      confirm ?? "确认",
+                      confirm ?? CommonLocalizations(locale).confirmText,
                       style: TextStyle(color: Colors.white),
                     )),
                 if(showCancel ?? false)
@@ -56,7 +58,7 @@ void showBottomModal(
                     minWidth: MediaQuery.of(context).size.width - 50,
                     onPressed: cancelClick,
                     child: Text(
-                      cancel ?? "取消",
+                      cancel ?? CommonLocalizations(locale).cancelText,
                       style: TextStyle(color: Theme.of(context).primaryColor),
                     ))
               ],
@@ -70,12 +72,13 @@ void showCustomizeSelectModal(
   BuildContext context, {
   String title,
   String subtitle,
-  bool isDismissible,
-  Widget widget
+  bool isDismissible = true,
+  @required Locale locale,
+  @required Widget widget
   }) {
     showModalBottomSheet(
         context: context,
-        isDismissible: isDismissible ?? true,
+        isDismissible: isDismissible,
         builder: (context) {
           return Container(
               color: Color(0xff737373),
