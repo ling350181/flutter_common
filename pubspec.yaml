@@ -28,12 +28,6 @@ flutter:
 
     assets:
       - images/warnning.png
-      - images/language.png
-      - images/update.png
-      - images/notice.png
-      - images/message.png
-      - images/done.png
-      - images/lock.png
 
   # example:
   # fonts:
