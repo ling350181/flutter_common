@@ -14,3 +14,4 @@ GeneratedPluginRegistrant.java
 key.properties
 .packages
 .dart_tool
+pubspec.lock
