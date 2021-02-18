@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # 本地push通知
+  flutter_local_notifications: ^3.0.1+2
+  rxdart: ^0.24.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
